@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Cadastrar Aluno</h1>
+
+  <form method="post" class="form-card">
+    {% csrf_token %}
+
+    {{ form.non_field_errors }}
+
+    <div>
+      <label>Nome</label>
+      {{ form.nome }}
+      {{ form.nome.errors }}
+    </div>
+
+    <div>
+      <label>Data de nascimento</label>
+      {{ form.data_nascimento }}
+      {{ form.data_nascimento.errors }}
+    </div>
+
+    <div>
+      <label>Endereço</label>
+      {{ form.endereco }}
+      {{ form.endereco.errors }}
+    </div>
+
+    <div>
+      <label>Sala</label>
+      {{ form.sala }}
+      {{ form.sala.errors }}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a href="{% url 'aluno_list' %}" class="btn btn-secondary">Cancelar</a>
+  </form>
+{% endblock %}

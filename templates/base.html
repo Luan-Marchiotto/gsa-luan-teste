@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sistema Escolar</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <a href="{% url 'home' %}"><img src="{% static 'img/logo.jpg' %}" class="logo" alt="Logo da Empresa" /></a>
+        <span class="system-title">Sistema Escolar</span>
+
+        {% if request.path != '/' %}
+          <nav class="nav">
+            <a href="{% url 'home' %}" class="nav-link">Página Incial</a>
+          </nav>
+
+          <nav class="nav">
+            <a href="{% url 'aluno_list' %}" class="nav-link">Alunos</a>
+          </nav>
+
+          <nav class="nav">
+            <a href="{% url 'sala_list' %}" class="nav-link">Salas</a>
+          </nav>
+        {% endif %}
+      </div>
+    </header>
+
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <footer class="footer">
+      ©{% now 'Y' %}Sistema Escolar • Todos os direitos reservados
+    </footer>
+  </body>
+</html>

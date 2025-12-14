@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="home">
+    <h1>Bem-vindo ao Sistema Escolar</h1>
+    <p>Gerencie alunos e salas de forma simples e organizada.</p>
+
+    <div class="home-actions">
+      <a href="{% url 'aluno_list' %}" class="btn btn-primary">Gerenciar Alunos</a>
+
+      <a href="{% url 'sala_list' %}" class="btn btn-secondary">Gerenciar Salas</a>
+    </div>
+  </div>
+{% endblock %}
