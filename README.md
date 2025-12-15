@@ -8,8 +8,8 @@
 </p>
 
 
-### 🏫 SchoolManager - Sistema de Gerenciamento Escolar
-- Este projeto é uma aplicação web chamada "SchoolManager", desenvolvida com Python e Django, permitindo o cadastro e listagem de alunos e salas de aula.
+### 🏫 Sistema de Gerenciamento Escolar
+- Este projeto é uma aplicação web, desenvolvida com Python e Django, permitindo o cadastro e listagem de alunos e salas de aula.
 
 ## 🛠️ Tecnologias usadas
 
